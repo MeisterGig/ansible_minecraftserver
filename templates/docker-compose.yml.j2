@@ -13,7 +13,7 @@ services:
       RWA_RCON_PASSWORD: {{ rcon_password }}
     ports:
       - 4326:4326
-      - 4327:4327 Websocket Access
+      - 4327:4327
   minecraftserver:
     image: itzg/minecraft-server:{{ minecraftserver_image_version }}
     container_name: {{ minecraftserver_container_name }}
