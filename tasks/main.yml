@@ -1,14 +1,14 @@
 ---
 - name: Install minecraftserver
-  include_role: 
-    name: install.yml
+  ansible.builtin.include_tasks: 
+    file: install.yml
   when: >
     minecraftserver_state is not defined
     or minecraftserver_state == 'present'
 
 - name: Remove minecraftserver
-  include_role: 
-    name: remove.yml
+  ansible.builtin.include_tasks: 
+    file: remove.yml
   when: >
     minecraftserver_state is defined
     and minecraftserver_state == 'absent'
